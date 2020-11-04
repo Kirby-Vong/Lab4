@@ -1,10 +1,9 @@
-#ifndef _MULT_HPP__
-#define _MULT_HPP__
+#ifndef __MULT_HPP__
+#define __MULT_HPP__
 
 
 #include "base.hpp"
 #include <string>
-#include <sstream>
 
 using namespace std;
 
@@ -16,7 +15,7 @@ class mult : public Base {
 		mult(Base* firstValue, Base* secondValue) {
 			left = firstValue;
 			right = secondValue;
-		};
+		}
 
 		virtual double evaluate() {
 			return left->evaluate() * right->evaluate(); 
