@@ -29,6 +29,24 @@ TEST(multTest, multEvaluateZero) {
 	EXPECT_EQ(test->evaluate(), 0);
 }
 
+TEST(multTest, multDiv) {
+	Base* val1 = new Op(4);
+	Base* val2 = new Op(2);
+	Div* test1 = new Div(val1, val2);
+	Base* val3 = new Op(7);
+	mult* test2 = new mult(test1, val3);
+	EXPECT_EQ(test2->evaluate(), 14);
+}
+
+TEST(multTest, multSub) {
+	Base* val1 = new Op(7);
+	Base* val2 = new Op(3);
+	Sub* test1 = new Sub(val1, val2);
+	Base* val3 = new Op(7);
+	mult* test2 = new mult(test1, val3);
+	EXPECT_EQ(test2->evaluate(), 28);
+}
+
 TEST(multTest, multAdd) {
 	Base* val1 = new Op(5);
 	Base* val2 = new Op(3);
